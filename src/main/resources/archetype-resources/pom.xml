@@ -47,7 +47,8 @@
                 <artifactId>maven-antrun-plugin</artifactId>
                 <configuration>
                     <tasks>
-                        <copy file="target/${artifactId}-${version}.jar" todir="${spigot}/plugins"/>
+                        <property name="spigot.basedir" location="${spigot}"/>
+                        <copy file="target/${artifactId}-${version}.jar" todir="${spigot.basedir}/plugins"/>
                     </tasks>
                 </configuration>
                 <executions>
